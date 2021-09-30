@@ -11,6 +11,9 @@
       >
         {{ ingredient.name }} ({{ ingredient.amount }})
       </a>
+      <p *ngIf="ingredients.length === 0">
+        No ingridients at this point
+      </p>
     </ul>
   </div>
 </div>
