@@ -13,11 +13,13 @@ import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core.module';
 import { AuthModule } from './auth/auth.module';
 import { LoggingService } from './logging.service';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    NotFoundComponent
   ],
   imports: [
     CoreModule,

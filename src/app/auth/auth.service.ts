@@ -4,6 +4,7 @@ import {catchError, tap} from "rxjs/operators";
 import {BehaviorSubject, throwError} from "rxjs";
 import {User} from "./user.model";
 import {Router} from '@angular/router';
+import { environment } from "src/environments/environment";
 
 export interface AuthResponseData {
   kind: string;
@@ -20,11 +21,12 @@ export class AuthService {
   constructor(private http: HttpClient, private router: Router) {
   }
   user = new BehaviorSubject<User>(null);
-  key = 'AIzaSyBYU_zpmdD76ZvVegSn4lBXiAjw3W0fOm8';
-  url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${this.key}`;
+  key = environment.firebaseAPIkey;
+  signUpUrl = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${this.key}`;
+  logInUrl = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${this.key}`;
   expirationTimer: any;
   signup(email: string, password: string) {
-    return this.http.post<AuthResponseData>(this.url, {
+    return this.http.post<AuthResponseData>(this.signUpUrl, {
       email,
       password,
       returnSecureToken: true
@@ -33,7 +35,7 @@ export class AuthService {
     }));
   }
   login(email: string, password: string) {
-    return this.http.post<AuthResponseData>(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${this.key}`, {
+    return this.http.post<AuthResponseData>(this.logInUrl, {
       email,
       password,
       returnSecureToken: true
@@ -88,6 +90,7 @@ export class AuthService {
         errorMessage = 'Invalid password';
         break;
     }
+    return throwError(errorMessage);
   }
   private handleAuthentication(email: string, userId: string, token: string, expiresIn: number) {
     const expirationDate = new Date(new Date().getTime() + expiresIn * 1000);
