@@ -8,6 +8,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Master Angular 12 (formerly "Angular 2") and build awesome, reactive web apps with the successor of Angular.js
 <hr>
 
+Check it online: https://angular-course-3605b.web.app
+
 ## What I've learned
 
 <ul>
