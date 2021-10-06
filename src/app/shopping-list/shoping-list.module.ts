@@ -10,7 +10,7 @@ import { ShoppingListComponent } from "./shopping-list.component";
         ShoppingListComponent,
         ShoppingEditComponent,
     ], imports: [
-        RouterModule.forChild([{ path: 'shopping-list', component: ShoppingListComponent }]), FormsModule, SharedModule
+        RouterModule.forChild([{ path: '', component: ShoppingListComponent }]), FormsModule, SharedModule
     ], 
     exports: [
         ShoppingListComponent,
