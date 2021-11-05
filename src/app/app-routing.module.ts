@@ -8,7 +8,7 @@ const appRoutes: Routes = [
   { path: 'recipes', loadChildren: () => import('./recipes/recipes.module').then(m => m.RecipesModule) },
   { path: 'shopping-list', loadChildren: () => import('./shopping-list/shoping-list.module').then(m => m.ShoppingListModule) },
   { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
-  { path: '**', component: NotFoundComponent }
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
