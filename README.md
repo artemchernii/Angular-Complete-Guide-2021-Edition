@@ -10,7 +10,7 @@ Master Angular 12 (formerly "Angular 2") and build awesome, reactive web apps wi
 
 Check it online: https://angular-course-3605b.web.app
 
-## What I've learned
+## What I've learned so far in the course
 
 <ul>
     <li>
@@ -34,7 +34,6 @@ Check it online: https://angular-course-3605b.web.app
 - If you don't have Angular CLI please first install it with this npm command `npm install -g @angular/cli`.
 - Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 ## Tests
-<hr />
 <p>
     For now I didn't make any tests for this project. Wait for updates.
 </p>
