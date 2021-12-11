@@ -35,5 +35,5 @@ Check it online: https://angular-course-3605b.web.app
 - Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 ## Tests
 <p>
-    For now I didn't make any tests for this project
+    For now I didn't make any tests for this project.
 </p>
