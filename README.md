@@ -29,5 +29,11 @@ Check it online: https://angular-course-3605b.web.app
 <hr>
 
 ## To start
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Clone file to your local machine `git clone https://github.com/artemchernii/Angular-Complete-Guide-2021-Edition.git`
+- Install all install all dependencies `npm install`. (In case you don't have the NodeJS installed please first check https://nodejs.org/en/)
+- If you don't have Angular CLI please first install it with this npm command `npm install -g @angular/cli`.
+- Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Tests
+<p>
+    For now I didn't make any tests for this project
+</p>
