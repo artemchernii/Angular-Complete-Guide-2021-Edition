@@ -1,13 +1,16 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
-import {exhaustMap, map, take, tap} from 'rxjs/operators';
+import {exhaustMap, map, mergeMap, take, tap} from 'rxjs/operators';
 
 import { Recipe } from '../recipes/recipe.model';
 import { RecipeService } from '../recipes/recipe.service';
 import {AuthService} from "../auth/auth.service";
+import { interval, Observable } from 'rxjs';
+import 'rxjs/add/operator/flatMap';
 
 @Injectable({ providedIn: 'root' })
 export class DataStorageService {
+  public testOb: Observable<any>;
   constructor(private http: HttpClient, private recipeService: RecipeService, private authService: AuthService) {}
 
   storeRecipes() {

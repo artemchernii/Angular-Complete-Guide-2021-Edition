@@ -1,0 +1,19 @@
+<h1>{{name}}</h1>
+<label for="nameInput">Name</label>
+<input type="text" #nameInput placeholder="Your name" (change)="changeName(nameInput.value)">
+<button (click)="addItem()">Add item</button>
+<h3 *ngFor="let num of usersPosts | slice:0:3">
+    {{num.title}}
+</h3>
+
+<input type="text" name="randomValue" [(ngModel)]='randomValue'>
+<p>RV: {{randomValue}}</p>
+<p style="border: 1px solid green;">
+    <span>TEST HERE</span>
+
+    <a (click)="nav('testcomp')">GO TEST</a>
+    <a (click)="nav('testtwo')">GO 2</a>
+
+    <router-outlet></router-outlet>
+</p>
+
